@@ -299,7 +299,7 @@ public class PushPlugin extends CordovaPlugin {
             // Try to figure out if the value is another JSON object
 
             String strValue = (String) value;
-            if (strValue.startsWith("{")) {
+            if (strValue != null && strValue.startsWith("{")) {
               try {
                 JSONObject json2 = new JSONObject(strValue);
                 jsondata.put(key, json2);
